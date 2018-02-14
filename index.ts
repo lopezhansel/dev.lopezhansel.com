@@ -11,11 +11,11 @@ function writeToFile(string) {
 }
 
 function getClientInfo(req) {
-  var forwardedIpsStr = req.header('x-forwarded-for');
-  var IP = '';
+  let forwardedIpsStr = req.header('x-forwarded-for');
+  let IP = '';
 
   if (forwardedIpsStr) {
-    IP = forwardedIps = forwardedIpsStr.split(',')[0];
+    IP = forwardedIpsStr.split(',')[0];
   }
   let {
     remoteAddress
@@ -42,4 +42,4 @@ app.get('/log', (req, res) => {
 })
 
 app.use(express.static(__dirname + '/public'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`,__dirname))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`, __dirname))
