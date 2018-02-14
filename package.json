@@ -1,0 +1,22 @@
+{
+  "name": "lopezhansel.com",
+  "version": "1.0.0",
+  "description": "Personal Website for Hansel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lopezhansel/lopezhansel.com.git"
+  },
+  "author": "Hansel Lopez <lopezhansel@gmail.com> (http://www.lopezhansel.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lopezhansel/lopezhansel.com/issues"
+  },
+  "homepage": "https://github.com/lopezhansel/lopezhansel.com#readme",
+  "dependencies": {
+    "express": "4.16.2"
+  }
+}
