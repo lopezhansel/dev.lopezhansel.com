@@ -24,11 +24,11 @@ p {
     font-weight: 400;
     line-height: 30px;
     font-size: 20px;
-    text-shadow: 0px 0px 6px rgba(150, 150, 150, 1);
+    text-shadow: 0px 0px 6px rgb(199, 199, 199); 
 }
 
 .keeping-me-awake {
-    color: #fff;
+    color: #282828;
     /* background: rgba(0, 0, 0, 0.1); */
     padding: 15px;
     border-radius: 5px;
@@ -40,7 +40,7 @@ p {
     padding: 10px;
     margin-right: 5px;
     border-radius: 100px;
-    background: #fff;
+    background: #282828;
     cursor: pointer;
 }
 
@@ -70,7 +70,7 @@ p {
     /* padding-bottom: 15px; */
     padding-right: 10px;
     padding-left: 15px;
-    background-color: #fff;
+    background-color: #282828;
     color: #CBDEDF;
 }
 
