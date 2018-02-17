@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon",
+    "dev": "lite-server --baseDir=public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "homepage": "https://github.com/lopezhansel/lopezhansel.com#readme",
   "dependencies": {
     "express": "4.16.2"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
   }
 }
