@@ -20,11 +20,11 @@ body {
     transform: translateY(-80%);
 }
 
-p {
+.intro {
     font-weight: 400;
     line-height: 30px;
     font-size: 20px;
-    text-shadow: 0px 0px 6px rgb(199, 199, 199); 
+    text-shadow: 0px 0px 6px rgb(199, 199, 199);
 }
 
 .keeping-me-awake {
