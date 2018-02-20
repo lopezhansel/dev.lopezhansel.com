@@ -9,7 +9,7 @@
     "start-js": "react-scripts-ts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts-ts build",
-    "build": "mv public/web public/static && npm-run-all build-css build-js && mv build/static/ build/web/ && mv public/static public/web",
+    "build": "mv public/web public/static && npm-run-all build-css build-js && mv build/static/ build/web/ && mv public/static public/web && sed -i 's/static/web/g' build/index.html",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "start-server": "tsc index.ts && nodemon",
