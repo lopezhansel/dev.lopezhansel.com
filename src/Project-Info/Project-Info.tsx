@@ -5,20 +5,12 @@ import './Project-Info.css';
 class ProjectInfo extends React.Component {
   props: { selectedProject: Project };
 
-  hasGallery = () => {
-    const { selectedProject } = this.props;
-    let hasGallery = selectedProject.gallery.length > 0;
-    console.log({ hasGallery });
-    return hasGallery;
-  }
-
   componentDidMount() {
     setupSlick();
   }
 
   render() {
-    const { name, company, description, gallery, stack } = this.props.selectedProject;
-    const hasGallery = this.hasGallery();
+    const { name, company, description, gallery, stack, hasGallery } = this.props.selectedProject;
     const noContent = <p>Content is being worked on. Please come back later.</p>;
     return (
       <div className="row">

@@ -13,7 +13,6 @@ export interface Projects {
 }
 
 export class CheckProp {
-  // tslint:disable-next-line:no-any
   protected checkProp(propValue: number | string, propName: string) {
     if (propValue === undefined) {
       throw new Error(`Expect property ${propName} to exist, but doesn't`);
@@ -32,6 +31,10 @@ export class ProjectImages extends CheckProp {
   private getImageUrl(num: number) {
     this.checkProp(this.galleryPath, 'galleryPath');
     return `/web/images/projects/${this.galleryPath}/image%20(${num}).png`;
+  }
+
+  get hasGallery(): boolean {
+    return this.gallery.length > 0;
   }
 
   get gallery() {
