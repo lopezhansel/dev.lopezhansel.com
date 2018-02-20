@@ -63,4 +63,4 @@ export let projects = [
     galleryPath: '',
     galleryTotal: 0,
   }
-]
+];
