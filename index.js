@@ -10,17 +10,19 @@ var express = require('express');
 var fs = require('fs');
 var app = express();
 var port = 3333;
-function writeToFile(string) {
-    fs.appendFile("./temp/test.json", string + '\n', function (err) {
-        if (err)
+function writeToFile(str) {
+    fs.appendFile('./temp/test.json', str + '\n', function (err) {
+        if (err) {
             return console.log(err);
+        }
     });
 }
+// tslint:disable-next-line:no-any
 function getClientInfo(req) {
     var forwardedIpsStr = req.header('x-forwarded-for');
     var IP = '';
     if (forwardedIpsStr) {
-        IP = forwardedIps = forwardedIpsStr.split(',')[0];
+        IP = forwardedIpsStr.split(',')[0];
     }
     var remoteAddress = req.connection.remoteAddress;
     return __assign({}, req.headers, { remoteAddress: remoteAddress,
@@ -29,7 +31,7 @@ function getClientInfo(req) {
 app.get('/', function (req, res) {
     writeToFile(JSON.stringify(getClientInfo(req)) + ',');
     res.sendFile('index.html', {
-        root: __dirname + '/public/'
+        root: __dirname + '/build/'
     });
 });
 app.get('/log', function (req, res) {
@@ -38,5 +40,5 @@ app.get('/log', function (req, res) {
         root: __dirname + '/temp/'
     });
 });
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/build'));
 app.listen(port, function () { return console.log("Example app listening on port " + port + "!", __dirname); });

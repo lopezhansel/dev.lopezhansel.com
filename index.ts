@@ -1,16 +1,18 @@
-const express = require('express')
+const express = require('express');
 const fs = require('fs');
-const app = express()
-const port = 3333
+const app = express();
+const port = 3333;
 
-function writeToFile(string) {
-  fs.appendFile("./temp/test.json", string + '\n', (err) => {
-    if (err)
+function writeToFile(str: string) {
+  fs.appendFile('./temp/test.json', str + '\n', (err) => {
+    if (err) {
       return console.log(err);
+    }
   });
 }
 
-function getClientInfo(req) {
+// tslint:disable-next-line:no-any
+function getClientInfo(req: any) {
   let forwardedIpsStr = req.header('x-forwarded-for');
   let IP = '';
 
@@ -19,27 +21,27 @@ function getClientInfo(req) {
   }
   let {
     remoteAddress
-  } = req.connection
+  } = req.connection;
   return {
     ...req.headers,
     remoteAddress,
     IP
-  }
+  };
 }
 
 app.get('/', (req, res) => {
-  writeToFile(JSON.stringify(getClientInfo(req)) + ',')
+  writeToFile(JSON.stringify(getClientInfo(req)) + ',');
   res.sendFile('index.html', {
-    root: __dirname + '/public/',
+    root: __dirname + '/build/',
   });
-})
+});
 
 app.get('/log', (req, res) => {
   // TODO: Missing ending bracket.
   res.sendFile('test.json', {
     root: __dirname + '/temp/',
   });
-})
+});
 
-app.use(express.static(__dirname + '/public'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`, __dirname))
+app.use(express.static(__dirname + '/build'));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`, __dirname));
