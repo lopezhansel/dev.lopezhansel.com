@@ -53,7 +53,7 @@ function setupSlick() {
 function Slide(prop: { image: string }) {
   return (
     <div className="slide" >
-      <img src={prop.image} alt="" />
+      <img src={'./' + prop.image} alt="" />
     </div>
   );
 }
