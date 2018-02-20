@@ -1,0 +1,49 @@
+/* Projects */
+
+.projects {
+    background: rgba(255, 255, 255, .95);
+    padding: 1em;
+}
+
+.project {
+    padding: 1em;
+    color: #333;
+    &:hover,
+    &:active {
+        background: #f3f3f3;
+    }
+    .title {
+        color: #2980b9;
+        font-weight: 500;
+        font-size: 1.5em;
+        border-bottom: 1px #3498db solid;
+        margin-bottom: .3em;
+    }
+    .more button {
+        padding: 0px 10px;
+        position: relative;
+        line-height: 0em;
+        height: 3em;
+        margin: 0px;
+        float: right;
+        border: none;
+        background: rgba(255, 255, 255, .1);
+        /* border-bottom: #2980b9 1px solid; */
+        border-radius: 5px;
+        color: #2980b9;
+    }
+    .more {
+        position: relative;
+        height: 2em;
+    }
+    .description {
+        height: 3em;
+        font-size: 1em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: .5em;
+    }
+}
