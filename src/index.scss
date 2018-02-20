@@ -30,7 +30,9 @@ button.overwrite {
   margin: 5px;
   /* float: right; */
   border: none;
-  border-bottom: #2980b9 1px solid;
   border-radius: 0px;
   color: #2980b9;
+  &.active {
+    border-bottom: #2980b9 1px solid;
+  }
 }

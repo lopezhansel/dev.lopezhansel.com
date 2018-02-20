@@ -4,6 +4,7 @@ import Home from '../Home/Home';
 import ProjectInfo from '../Project-Info/Project-Info';
 import ProjectList from '../Project-List/Project-List';
 import { projectData, Project } from '../portfolio/project';
+import * as classNames from 'classnames';
 
 enum navEnum {
   home,
@@ -31,7 +32,7 @@ class App extends React.Component {
     this.setState(this.state);
   }
 
-  getAppState(check: navEnum) {
+  isActive(check: navEnum) {
     switch (check) {
       case navEnum.home:
         return this.state.appState === navEnum.home;
@@ -48,17 +49,18 @@ class App extends React.Component {
     const { projectData: ProjectJson, selectedProject } = this.state;
     const goHome = this.setNavState(navEnum.home);
     const gotoProjectList = this.setNavState(navEnum.projectList);
+
     return (
       <div style={{ height: '100%' }}>
         <br />
         <div className="container">
-          <button className="overwrite" onClick={goHome}>Home </button>
-          <button className="overwrite" onClick={gotoProjectList}>Projects </button>
+          <button className={classNames({ 'overwrite': true, 'active': this.isActive(navEnum.home) })} onClick={goHome}>Home </button>
+          <button className={classNames({ 'overwrite': true, 'active': this.isActive(navEnum.projectList) })} onClick={gotoProjectList}>Projects </button>
         </div>
-        {this.getAppState(navEnum.home) && <Home />}
-        {this.getAppState(navEnum.projectInfo) && <Container><ProjectInfo selectedProject={selectedProject} /> </Container>}
-        {this.getAppState(navEnum.projectList) && <Container><ProjectList projectData={ProjectJson} selectProject={this.onProjectSelect} /></Container>}
-      </div>
+        {this.isActive(navEnum.home) && <Home />}
+        {this.isActive(navEnum.projectInfo) && <Container><ProjectInfo selectedProject={selectedProject} /> </Container>}
+        {this.isActive(navEnum.projectList) && <Container><ProjectList projectData={ProjectJson} selectProject={this.onProjectSelect} /></Container>}
+      </div >
 
     );
   }
