@@ -3,9 +3,9 @@ $(document).ready(() => {
     $(".you-is-important").fitText(0.8);
 
     $('.gallery').slick({
-        slidesToShow: 3,
+        slidesToShow: 1,
         autoplay: true,
- 
+
     });
 
 })
