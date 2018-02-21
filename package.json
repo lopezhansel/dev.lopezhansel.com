@@ -26,10 +26,13 @@
   },
   "homepage": "./",
   "dependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^0.18.0",
     "classnames": "2.2.5",
     "express": "4.16.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-markdown": "^3.2.0",
     "react-scripts-ts": "2.13.0"
   },
   "devDependencies": {
