@@ -18,7 +18,8 @@ class ProjectInfo extends React.Component {
     let { markdownUrl } = this.props.selectedProject;
     fetchMarkdown(markdownUrl)
       .then(s => {
-        this.state.markdown = s;
+        const contentDidDownload = s.length > 2;
+        this.state.markdown = contentDidDownload ? s : '';
         this.setState(this.state);
       });
   }
@@ -30,18 +31,14 @@ class ProjectInfo extends React.Component {
 
   render() {
     const { name, company, description, gallery, stack, hasGallery, links } = this.props.selectedProject;
-    const noContent = <p>Content is being worked on. Please come back later.</p>;
+    const noContent = <p>Description is being worked on. Please come back later.</p>;
+    const galleryProps = { hasGallery, gallery };
 
     return (
       <div className="row">
         <div className="project-info">
-          {hasGallery && <div className="gallery">
-            {gallery.map((i: string, key: number) => <Slide image={i} key={key} />)}
-          </div>}
-          {hasGallery && <br />}
-          {hasGallery && <br />}
+          <Gallery {...galleryProps} />
           <br />
-          {!hasGallery && noContent}
           <h1 className="title"> {name}  </h1>
           <div className="description">
             <b>Description</b>
@@ -56,10 +53,7 @@ class ProjectInfo extends React.Component {
             <b>Technologies used</b>
             <p>{stack.join(', ')}</p>
           </div>
-          <div>
-            <b>Links</b>
-            <Links links={links} />
-          </div>
+          <Links links={links} />
           <Markdown source={this.state.markdown} />
         </div>
       </div>
@@ -67,14 +61,33 @@ class ProjectInfo extends React.Component {
   }
 }
 
-function Links(prop: { links: string[] }) {
+function Gallery(prop: { hasGallery: boolean, gallery: string[] }) {
+  const noContent = <p>Pictures  are being worked on. Please come back later.</p>;
   return (
     <div>
-      {prop.links.map((l, k) => <li key={k}>
-        <a href={l} target="_blank">{l}</a>
-      </li>)}
+      {prop.hasGallery && <div className="gallery">
+        {prop.gallery.map((i: string, key: number) => <Slide image={i} key={key} />)}
+      </div>}
+      {prop.hasGallery && <br />}
+      {prop.hasGallery && <br />}
+      {!prop.hasGallery && noContent}
     </div>
   );
+}
+
+function Links(prop: { links: string[] }) {
+  if (prop.links.length > 0) {
+    return (
+      <div>
+        <b>Links</b>
+        {prop.links.map((l, k) => <li key={k}>
+          <a href={l} target="_blank">{l}</a>
+        </li  >)}
+      </div>
+    );
+  } else {
+    return null;
+  }
 }
 
 function setupSlick() {
