@@ -5,24 +5,27 @@ class Home extends React.Component {
 
   componentDidMount() {
     // tslint:disable-next-line:no-any
-    (window as any).$('.you-is-important').fitText(0.8);
+    (window as any).$('.brand').fitText(0.8);
   }
 
   render() {
     return (
-      <div className="container a-million-dreams">
+      <div className="container home">
         <div className="row">
-          <div className="one-half column keeping-me-awake shade">
-            <div className="row you-is-important">
-              <div className="you-is-kind">Hansel</div>
-              <div className="you-is-smart">Lopez</div>
+          {/* home-card */}
+          <div className="one-half column home-card">
+            <div className="brand">
+              <div className="half-name hansel">Hansel</div>
+              <div className="half-name lopez">Lopez</div>
             </div>
-            <div className="intro">
+
+            <div className="introduction">
               Working as a developer allows me to have the pleasure to work amongst the brightest minds thus,
               motivating me constantly to improve. I enjoy collaborating with team members, and sharing what I know.
               I truly believe that teaching is the best way to learn.
             </div>
-            <div className="i-like-butterflies">
+
+            <div className="links">
               <a href="https://www.linkedin.com/in/lopezhansel/" target="_blank">
                 <i className="fab fa-linkedin-in" />
               </a>
@@ -33,6 +36,7 @@ class Home extends React.Component {
                 <i className="fab fa fa-envelope" />
               </a>
             </div>
+
           </div>
         </div>
       </div>

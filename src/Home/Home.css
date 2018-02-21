@@ -1,64 +1,55 @@
-.a-million-dreams {
+.container.home {
   top: 50%;
   transform: translateY(-80%); }
 
-.shade {
+.home-card {
   background: rgba(255, 255, 255, 0.5);
-  border-radius: 5px; }
-
-.intro {
-  font-weight: 400;
-  line-height: 30px;
-  font-size: 20px;
-  text-shadow: 0px 0px 6px #c7c7c7; }
-
-.keeping-me-awake {
+  border-radius: 5px;
   color: #282828;
-  /* background: rgba(0, 0, 0, 0.1); */
-  padding: 15px;
-  border-radius: 5px; }
-
-.i-like-butterflies i {
-  color: #CBDEDF;
-  font-size: 28px;
-  padding: 10px;
-  margin-right: 5px;
-  border-radius: 100px;
-  background: #282828;
-  cursor: pointer; }
-
-.i-like-butterflies a {
-  opacity: 1;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out; }
-
-.i-like-butterflies a:hover {
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px); }
-
-.you-is-important {
-  display: flex;
-  font-weight: 400;
-  font-size: 45px;
-  text-transform: uppercase;
-  margin-bottom: 15px; }
-  .you-is-important .you-is-kind {
-    padding-right: 10px;
-    padding-left: 15px;
-    background-color: #282828;
-    color: #CBDEDF; }
-  .you-is-important .you-is-smart {
-    padding-right: 10px;
-    padding-left: 15px; }
-  .you-is-important div {
-    width: 50%;
-    display: inline; }
+  padding: 15px; }
+  .home-card .brand {
+    display: flex;
+    font-weight: 400;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+    .home-card .brand .hansel {
+      padding-right: 10px;
+      padding-left: 15px;
+      background-color: #282828;
+      color: #CBDEDF; }
+    .home-card .brand .lopez {
+      padding-right: 10px;
+      padding-left: 15px; }
+    .home-card .brand .half-name {
+      width: 50%;
+      display: inline; }
+  .home-card .introduction {
+    font-weight: 400;
+    line-height: 30px;
+    font-size: 20px;
+    text-shadow: 0px 0px 6px #c7c7c7; }
+  .home-card .links i {
+    color: #CBDEDF;
+    font-size: 28px;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 100px;
+    background: #282828;
+    cursor: pointer; }
+  .home-card .links a {
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  .home-card .links a:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px); }
