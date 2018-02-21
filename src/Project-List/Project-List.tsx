@@ -29,7 +29,9 @@ function ProjectItem(project: Partial<Project>) {
   return (
     <div className="project">
       <div className="title">
-        {project.name} @ {project.company}
+        <code style={{ background: 'none', border: 'none' }}>
+          ~/{project.name} @{project.company}
+        </code>
       </div>
       <div className="description ">
         {project.description || noDescription}

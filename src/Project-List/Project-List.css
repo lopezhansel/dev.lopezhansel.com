@@ -1,13 +1,19 @@
 /* Projects */
 .projects {
-  background: rgba(255, 255, 255, 0.95);
   padding: 1em; }
 
 .project {
+  background: rgba(255, 255, 255, 0.95);
+  margin-bottom: 15px;
   padding: 1em;
-  color: #333; }
+  color: #333;
+  -webkit-box-shadow: 0px 10px 10px -7px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 0px 10px 10px -7px rgba(0, 0, 0, 0.47);
+  box-shadow: 0px 10px 10px -7px rgba(0, 0, 0, 0.47);
+  border-left: 2px white solid; }
   .project:hover, .project:active {
-    background: #f3f3f3; }
+    background: #fff;
+    border-left: 2px #2980b9 solid; }
   .project .title {
     color: #2980b9;
     font-weight: 500;
