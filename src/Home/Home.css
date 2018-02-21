@@ -45,23 +45,20 @@
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px); }
 
-.you-is-kind {
-  padding-right: 10px;
-  padding-left: 15px;
-  background-color: #282828;
-  color: #CBDEDF; }
-
-.you-is-smart {
-  padding-right: 10px;
-  padding-left: 15px; }
-
 .you-is-important {
   display: flex;
   font-weight: 400;
   font-size: 45px;
   text-transform: uppercase;
   margin-bottom: 15px; }
-
-.you-is-important div {
-  width: 50%;
-  display: inline; }
+  .you-is-important .you-is-kind {
+    padding-right: 10px;
+    padding-left: 15px;
+    background-color: #282828;
+    color: #CBDEDF; }
+  .you-is-important .you-is-smart {
+    padding-right: 10px;
+    padding-left: 15px; }
+  .you-is-important div {
+    width: 50%;
+    display: inline; }

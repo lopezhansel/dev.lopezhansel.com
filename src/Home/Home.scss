@@ -22,46 +22,34 @@
   border-radius: 5px;
 }
 
-.i-like-butterflies i {
-  color: #CBDEDF;
-  font-size: 28px;
-  padding: 10px;
-  margin-right: 5px;
-  border-radius: 100px;
-  background: #282828;
-  cursor: pointer;
-}
-
-.i-like-butterflies a {
-  opacity: 1;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-
-.i-like-butterflies a:hover {
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
-}
-
-.you-is-kind {
-  padding-right: 10px;
-  padding-left: 15px;
-  background-color: #282828;
-  color: #CBDEDF;
-}
-
-.you-is-smart {
-  padding-right: 10px;
-  padding-left: 15px;
+.i-like-butterflies {
+  i {
+    color: #CBDEDF;
+    font-size: 28px;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 100px;
+    background: #282828;
+    cursor: pointer;
+  }
+  a {
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  a:hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }
 
 .you-is-important {
@@ -70,9 +58,18 @@
   font-size: 45px;
   text-transform: uppercase;
   margin-bottom: 15px;
-}
-
-.you-is-important div {
-  width: 50%;
-  display: inline;
+  .you-is-kind {
+    padding-right: 10px;
+    padding-left: 15px;
+    background-color: #282828;
+    color: #CBDEDF;
+  }
+  .you-is-smart {
+    padding-right: 10px;
+    padding-left: 15px;
+  }
+  div {
+    width: 50%;
+    display: inline;
+  }
 }
