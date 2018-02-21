@@ -8,11 +8,9 @@ function fetchMarkdown(url: string) {
   return axios.get(url).then(d => d.data);
 }
 
-const input = '### fetching description..';
-
 class ProjectInfo extends React.Component {
   props: { selectedProject: Project };
-  state = { markdown: input };
+  state = { markdown: '' };
 
   getMarkDown() {
     let { markdownUrl } = this.props.selectedProject;
@@ -41,7 +39,7 @@ class ProjectInfo extends React.Component {
           <br />
           <h1 className="title"> {name}  </h1>
           <div className="description">
-            <b>Description</b>
+            <b>Purpose</b>
             {!description && noContent}
             <p>{description && description}</p>
           </div>
