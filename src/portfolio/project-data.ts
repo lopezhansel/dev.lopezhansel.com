@@ -6,6 +6,7 @@ export let projects = [
     stack: 'AngularJS,Ionic ​1,​Cordova,​Chart.js,​Node,​Express,MongoDB',
     galleryPath: 'caminemos',
     galleryTotal: 21,
+    links: []
   },
   {
     name: 'PMobile',
@@ -14,6 +15,7 @@ export let projects = [
     stack: 'AngularJS,Ionic ​1,​Cordova,​Chart.js,​Node,​Express,MongoDB',
     galleryPath: 'pmobile',
     galleryTotal: 11,
+    links: []
   },
   {
     name: 'MobileMen',
@@ -22,6 +24,7 @@ export let projects = [
     stack: 'Angular 5,​Ionic 3,​NgRx,​Node,​Express,MongoDB',
     galleryPath: 'mobilemen',
     galleryTotal: 27,
+    links: []
   },
   {
     name: 'CheckUp',
@@ -30,6 +33,7 @@ export let projects = [
     stack: 'Angular 5,Ionic 3,​NgRx,​Node,​Express,MongoDB',
     galleryPath: 'checkup',
     galleryTotal: 22,
+    links: []
   },
   {
     name: 'WayToServe Admin',
@@ -38,6 +42,7 @@ export let projects = [
     stack: 'React,​Node,​Express,MongoDB',
     galleryPath: '',
     galleryTotal: 0,
+    links: []
   },
   {
     name: 'WayToServe Español',
@@ -46,6 +51,7 @@ export let projects = [
     stack: 'Angular 5',
     galleryPath: '',
     galleryTotal: 0,
+    links: []
   },
   {
     name: 'Velociti',
@@ -54,6 +60,7 @@ export let projects = [
     stack: 'AngularJS,​Node,​Express,Socket.IO,MongoDB',
     galleryPath: '',
     galleryTotal: 0,
+    links: ['https://github.com/lopezhansel/Velociti.co']
   },
   {
     name: 'OctoDex',
@@ -62,5 +69,6 @@ export let projects = [
     stack: 'AngularJS,Node,​Express,MongoDB',
     galleryPath: '',
     galleryTotal: 0,
+    links: ['https://github.com/lopezhansel/OctoDex']
   }
 ];

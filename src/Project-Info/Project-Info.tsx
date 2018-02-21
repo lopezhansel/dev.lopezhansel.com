@@ -10,7 +10,7 @@ class ProjectInfo extends React.Component {
   }
 
   render() {
-    const { name, company, description, gallery, stack, hasGallery } = this.props.selectedProject;
+    const { name, company, description, gallery, stack, hasGallery, links } = this.props.selectedProject;
     const noContent = <p>Content is being worked on. Please come back later.</p>;
     return (
       <div className="row">
@@ -36,10 +36,24 @@ class ProjectInfo extends React.Component {
             <b>Technologies used</b>
             <p>{stack.join(', ')}</p>
           </div>
+          <div>
+            <b>Links</b>
+            <Links links={links} />
+          </div>
         </div>
       </div>
     );
   }
+}
+
+function Links(prop: { links: string[] }) {
+  return (
+    <div>
+      {prop.links.map((l, k) => <li key={k}>
+        <a href={l} target="_blank">{l}</a>
+      </li>)}
+    </div>
+  );
 }
 
 function setupSlick() {

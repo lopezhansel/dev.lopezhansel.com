@@ -80,6 +80,7 @@ export class Project extends ProjectDates implements Projects {
     private _stack: string,
     public galleryPath: string,
     public galleryTotal: number,
+    public links: string[]
   ) {
     super();
   }
@@ -101,7 +102,7 @@ export class Project extends ProjectDates implements Projects {
 }
 
 export let projectData = projects
-  .map(p => new Project(p.name, p.company, p.description, p.stack, p.galleryPath, p.galleryTotal));
+  .map(p => new Project(p.name, p.company, p.description, p.stack, p.galleryPath, p.galleryTotal, p.links));
 
 // let startDate = new Date(Date.now() - (MS_IN_DAY * 5)).toJSON()
 // project.startDate = startDate;
