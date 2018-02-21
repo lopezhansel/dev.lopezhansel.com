@@ -6,7 +6,8 @@ export let projects = [
     stack: 'AngularJS,Ionic ​1,​Cordova,​Chart.js,​Node,​Express,MongoDB',
     galleryPath: 'caminemos',
     galleryTotal: 21,
-    links: []
+    links: [],
+    markdownUrl: undefined,
   },
   {
     name: 'PMobile',
@@ -15,7 +16,8 @@ export let projects = [
     stack: 'AngularJS,Ionic ​1,​Cordova,​Chart.js,​Node,​Express,MongoDB',
     galleryPath: 'pmobile',
     galleryTotal: 11,
-    links: []
+    links: [],
+    markdownUrl: undefined,
   },
   {
     name: 'MobileMen',
@@ -24,7 +26,8 @@ export let projects = [
     stack: 'Angular 5,​Ionic 3,​NgRx,​Node,​Express,MongoDB',
     galleryPath: 'mobilemen',
     galleryTotal: 27,
-    links: []
+    links: [],
+    markdownUrl: undefined,
   },
   {
     name: 'CheckUp',
@@ -33,42 +36,48 @@ export let projects = [
     stack: 'Angular 5,Ionic 3,​NgRx,​Node,​Express,MongoDB',
     galleryPath: 'checkup',
     galleryTotal: 22,
-    links: []
+    links: [],
+    markdownUrl: undefined,
   },
   {
     name: 'WayToServe Admin',
     company: 'Klein Buendel',
     description: '',
     stack: 'React,​Node,​Express,MongoDB',
-    galleryPath: '',
+    galleryPath: 'wts-admin',
     galleryTotal: 0,
-    links: []
+    links: [],
+    markdownUrl: undefined,
   },
   {
     name: 'WayToServe Español',
     company: 'Klein Buendel',
     description: '',
     stack: 'Angular 5',
-    galleryPath: '',
+    galleryPath: 'wts-es',
     galleryTotal: 0,
-    links: []
+    links: [],
+    markdownUrl: undefined,
   },
   {
     name: 'Velociti',
     company: 'RefactorU',
-    description: '',
+    description: 'A bike delivery app where you can request anything',
     stack: 'AngularJS,​Node,​Express,Socket.IO,MongoDB',
-    galleryPath: '',
+    galleryPath: 'velociti',
     galleryTotal: 0,
-    links: ['https://github.com/lopezhansel/Velociti.co']
+    links: ['https://github.com/lopezhansel/Velociti.co'],
+    markdownUrl: undefined,
+    // markdownUrl: 'https://raw.githubusercontent.com/lopezhansel/Velociti.co/master/readme.md',
   },
   {
     name: 'OctoDex',
     company: 'Open Source',
-    description: '',
+    description: 'Easily create and share a virtual business card using your Github information',
     stack: 'AngularJS,Node,​Express,MongoDB',
-    galleryPath: '',
+    galleryPath: 'octodex',
     galleryTotal: 0,
-    links: ['https://github.com/lopezhansel/OctoDex']
+    links: ['https://github.com/lopezhansel/OctoDex'],
+    markdownUrl: undefined,
   }
 ];

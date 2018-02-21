@@ -70,6 +70,7 @@ export class ProjectDates extends ProjectImages {
 export class Project extends ProjectDates implements Projects {
 
   public markdown: string;
+  public markdownUrl: string;
   public startDate: string;
   public endDate: string;
 
@@ -80,9 +81,11 @@ export class Project extends ProjectDates implements Projects {
     private _stack: string,
     public galleryPath: string,
     public galleryTotal: number,
-    public links: string[]
+    public links: string[],
+    markdownUrl?: string
   ) {
     super();
+    this.markdownUrl = markdownUrl || `/web/markdown/${galleryPath}.md`;
   }
 
   get stack() {
@@ -102,7 +105,7 @@ export class Project extends ProjectDates implements Projects {
 }
 
 export let projectData = projects
-  .map(p => new Project(p.name, p.company, p.description, p.stack, p.galleryPath, p.galleryTotal, p.links));
+  .map(p => new Project(p.name, p.company, p.description, p.stack, p.galleryPath, p.galleryTotal, p.links, p.markdownUrl));
 
 // let startDate = new Date(Date.now() - (MS_IN_DAY * 5)).toJSON()
 // project.startDate = startDate;
