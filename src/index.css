@@ -1,17 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400");
-html,
-body {
-  height: 100vh; }
-
-body {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
-  font-weight: 300; }
-
 #root {
   height: 100vh; }
 

@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+html,
 body {
+    height: 100vh;
+}
+
+body {
+    background: #add5e1;
     background-image: url("../images/bg2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
 }
