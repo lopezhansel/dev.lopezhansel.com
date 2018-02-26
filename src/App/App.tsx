@@ -1,10 +1,11 @@
 import * as React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+// My Files
 import Home from '../Home/Home';
 import ProjectInfo from '../Project-Info/Project-Info';
 import ProjectList from '../Project-List/Project-List';
 import { projectData, Project } from '../portfolio/project';
-import * as classNames from 'classnames';
+import './App.css';
 
 enum navSt {
   home,
@@ -46,23 +47,41 @@ class App extends React.Component {
   }
 
   render() {
-    const { projectData: ProjectJson, selectedProject } = this.state;
-    const goHome = this.setNavState(navSt.home);
-    const gotoProjectList = this.setNavState(navSt.projectList);
-
+    const { projectData: ProjectJson } = this.state;
+    
     return (
-      <div style={{ height: '100%' }}>
-        <br />
-        <div className="container">
-          <button className={classNames('overwrite', { 'active': this.isActive(navSt.home) })} onClick={goHome}>Home </button>
-          <button className={classNames('overwrite', { 'active': this.isActive(navSt.projectList) })} onClick={gotoProjectList}>Projects </button>
-        </div>
-        {this.isActive(navSt.home) && <Home />}
+      <Router>
+        <div style={{ height: '100%' }}>
+          <NavBar />
+          <br />
+          <Route exact={true} path="/" component={Home} />
+          <Container>
+            <Route path="/more-info" component={ProjectInfo} />
+            <Route path="/projects" projectData={ProjectJson} component={ProjectList} />
+          </Container>
+        </div >
+        {/* {this.isActive(navSt.home) && <Home />}
         {this.isActive(navSt.projectInfo) && <Container><ProjectInfo selectedProject={selectedProject} /> </Container>}
-        {this.isActive(navSt.projectList) && <Container><ProjectList projectData={ProjectJson} selectProject={this.onProjectSelect} /></Container>}
-      </div >
+      {this.isActive(navSt.projectList) && <Container><ProjectList projectData={ProjectJson} selectProject={this.onProjectSelect} /></Container>} */}
+      </Router>
     );
   }
+}
+
+function NavBar() {
+  return (
+    <div className="container">
+      <button className="overwrite" >
+        <Link to="/">Home</Link>
+      </button>
+      <button className="overwrite">
+        <Link to="/projects">Projects</Link>
+      </button>
+      <button className="overwrite">
+        <Link to="/more-info">More Info</Link>
+      </button>
+    </div>
+  );
 }
 
 function Container(prop: React.Props<null>) {
