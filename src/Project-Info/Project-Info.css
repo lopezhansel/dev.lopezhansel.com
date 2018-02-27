@@ -1,6 +1,26 @@
 .project-info {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 1em; }
+  color: #444; }
+  .project-info .pi-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1em; }
+  .project-info b {
+    color: #265056; }
+  .project-info .pi-title-container {
+    position: relative;
+    background-color: #265056;
+    color: white; }
+    .project-info .pi-title-container .pi-title {
+      padding: 15px;
+      display: inline-block;
+      font-size: 24px; }
+    .project-info .pi-title-container .close {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      padding: 22px; }
+      .project-info .pi-title-container .close a {
+        text-decoration: none;
+        color: white; }
 
 .gallery {
   height: 400px; }
