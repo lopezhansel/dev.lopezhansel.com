@@ -4,7 +4,7 @@ import { Project } from '../portfolio/project';
 import './Project-Info.css';
 import axios from 'axios';
 import { Markdown } from '../Markdown/Markdown';
-import { match } from 'react-router-dom';
+import { match, Link } from 'react-router-dom';
 
 function fetchMarkdown(url: string) {
   return axios.get(url).then(d => d.data);
@@ -57,7 +57,12 @@ class ProjectInfo extends React.Component {
     return (
       <div className="row">
         <div className="project-info">
-          <h1 className="pi-title">{name}</h1>
+          <div className="pi-title-container">
+            <div className="pi-title">{name}</div>
+            <div className="close">
+              <Link to="/projects"> <i className="fa fa-times" /></Link>
+            </div>
+          </div>
           <div className="pi-container">
             <Gallery {...galleryProps} />
             <br />
