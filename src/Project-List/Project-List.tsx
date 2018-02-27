@@ -40,12 +40,13 @@ function ProjectItem(project: Partial<Project>) {
     <div className="project">
       <div className="title">
         <code style={{ background: 'none', border: 'none' }}>
-          ~/{project.name} @{project.company}
+          ~/{project.name}
         </code>
       </div>
       <div className="description ">
         {project.description || noDescription}
       </div>
+      <div className="company">@{project.company}</div >
       <div className="more">
         <Link to={'/projects/' + project.name}> View</Link>
       </div>
