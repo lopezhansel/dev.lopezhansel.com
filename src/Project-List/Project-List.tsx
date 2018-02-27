@@ -22,7 +22,8 @@ const Projects = ({ projectData, selectProject, history }: ProjectListTypes) => 
   </div>
 );
 
-const ProjectList = (props) => (
+// tslint:disable-next-line:no-any
+const ProjectList = (props: any) => (
   <div className="row">
     <Route
       exact={true}

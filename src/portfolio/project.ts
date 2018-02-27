@@ -102,19 +102,3 @@ export class Project extends ProjectDates implements Projects {
   }
 
 }
-
-// let startDate = new Date(Date.now() - (MS_IN_DAY * 5)).toJSON()
-// project.startDate = startDate;
-// project.endDate = new Date(Date.now() - (MS_IN_DAY * 3)).toJSON()
-
-// // project.daysAgo //?
-// // let { daysAgo, projectDuration, gallery, thumb } = project
-// // project.projectDuration //?
-// // project.gallery //?
-// // project.thumb //?
-// let obj = { ...project, daysAgo, projectDuration, gallery, thumb }
-
-// console.log(project.toJSON())
-
-// new ProjectImages('mobilemen', 27)
-// new ProjectImages('pmobile', 11)
