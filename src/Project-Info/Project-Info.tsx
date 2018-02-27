@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import { Project } from '../portfolio/project';
 import './Project-Info.css';
 import axios from 'axios';
@@ -9,7 +10,9 @@ function fetchMarkdown(url: string) {
 }
 
 class ProjectInfo extends React.Component {
-  props: { selectedProject: Project };
+  props: {
+    selectedProject: Project
+  };
   state = { markdown: '' };
 
   getMarkDown() {
@@ -99,9 +102,18 @@ function setupSlick() {
 function Slide(prop: { image: string }) {
   return (
     <div className="slide" >
-      <img src={'./' + prop.image} alt="" />
+      <img src={prop.image} alt="" />
     </div>
   );
 }
 
-export default ProjectInfo;
+// tslint:disable-next-line:no-any
+const mapStateToProps = (state: any, ownProps: any) => {
+  console.log(state);
+  return {
+    selectedProject: state.selectedProject
+  };
+};
+
+/* tslint:disable */
+export default connect(mapStateToProps)(ProjectInfo);
