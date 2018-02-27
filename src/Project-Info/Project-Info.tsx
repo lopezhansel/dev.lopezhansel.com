@@ -57,24 +57,26 @@ class ProjectInfo extends React.Component {
     return (
       <div className="row">
         <div className="project-info">
-          <Gallery {...galleryProps} />
-          <br />
-          <h1 className="title"> {name}  </h1>
-          <div className="description">
-            <b>Purpose</b>
-            {!description && noContent}
-            <p>{description && description}</p>
+          <h1 className="pi-title">{name}</h1>
+          <div className="pi-container">
+            <Gallery {...galleryProps} />
+            <br />
+            <div className="description">
+              <b>Purpose</b>
+              {!description && noContent}
+              <p>{description && description}</p>
+            </div>
+            <div>
+              <b>Company</b>
+              <p>{company}</p>
+            </div>
+            <div>
+              <b>Technologies used</b>
+              <p>{stack.join(', ')}</p>
+            </div>
+            <Links links={links} />
+            <Markdown source={this.state.markdown} />
           </div>
-          <div>
-            <b>Company</b>
-            <p>{company}</p>
-          </div>
-          <div>
-            <b>Technologies used</b>
-            <p>{stack.join(', ')}</p>
-          </div>
-          <Links links={links} />
-          <Markdown source={this.state.markdown} />
         </div>
       </div>
     );

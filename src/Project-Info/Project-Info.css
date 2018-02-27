@@ -1,6 +1,12 @@
-.project-info {
+.project-info .pi-container {
   background: rgba(255, 255, 255, 0.95);
   padding: 1em; }
+
+.project-info .pi-title {
+  padding: 15px;
+  margin: 0px;
+  background-color: #2980b9;
+  color: white; }
 
 .gallery {
   height: 400px; }
