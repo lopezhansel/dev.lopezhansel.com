@@ -13,7 +13,8 @@
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "start-server": "tsc index.ts && nodemon",
-    "dev": "lite-server --baseDir=public --port==4343"
+    "dev": "lite-server --baseDir=public --port==4343",
+    "run-prod": "pm2 start index.js --name=website"
   },
   "repository": {
     "type": "git",
