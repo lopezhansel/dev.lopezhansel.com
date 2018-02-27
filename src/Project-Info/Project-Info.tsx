@@ -1,19 +1,23 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { connect, Dispatch } from 'react-redux';
 import { Project } from '../portfolio/project';
 import './Project-Info.css';
 import axios from 'axios';
 import { Markdown } from '../Markdown/Markdown';
+import { match } from 'react-router-dom';
 
 function fetchMarkdown(url: string) {
   return axios.get(url).then(d => d.data);
 }
 
 class ProjectInfo extends React.Component {
-  props: {
-    selectedProject: Project
-  };
   state = { markdown: '' };
+  props: {
+    selectedProject: Project,
+    projectData: Project[],
+    match: match<{ projectId: string }>,
+    dispatch: Dispatch<object>
+  };
 
   getMarkDown() {
     let { markdownUrl } = this.props.selectedProject;
@@ -25,12 +29,27 @@ class ProjectInfo extends React.Component {
       });
   }
 
+  componentWillMount() {
+    if (!this.props.selectedProject) {
+      let { projectId } = this.props.match.params;
+      let project = this.props.projectData.find(p => p.name === projectId);
+      if (project) {
+        this.props.dispatch({ type: 'Select Project', payload: project });
+      }
+    }
+  }
+
   componentDidMount() {
-    setupSlick();
-    this.getMarkDown();
+    if (this.props.selectedProject) {
+      setupSlick();
+      this.getMarkDown();
+    }
   }
 
   render() {
+    if (!this.props.selectedProject) {
+      return <div>No Data</div>;
+    }
     const { name, company, description, gallery, stack, hasGallery, links } = this.props.selectedProject;
     const noContent = <p>Description is being worked on. Please come back later.</p>;
     const galleryProps = { hasGallery, gallery };
@@ -108,12 +127,10 @@ function Slide(prop: { image: string }) {
 }
 
 // tslint:disable-next-line:no-any
-const mapStateToProps = (state: any, ownProps: any) => {
-  console.log(state);
-  return {
-    selectedProject: state.selectedProject
-  };
-};
+const mapStateToProps = (state: any, ownProps: any) => ({
+  selectedProject: state.selectedProject,
+  projectData: state.projects.projectData
+});
 
 /* tslint:disable */
 export default connect(mapStateToProps)(ProjectInfo);
