@@ -12,19 +12,32 @@ type ProjectListTypes = {
   history: { push: (p: string) => void },
 };
 
-const Projects = ({ projectData, selectProject, history }: ProjectListTypes) => (
-  <div className="projects" >
-    {projectData.map(p =>
-      <div onClick={() => history.push('/projects/' + p.name) || selectProject(p)} key={p.name}>
-        <ProjectItem {...p} />
-      </div>
-    )}
-  </div>
-);
+const Projects = ({ projectData, selectProject, history }: ProjectListTypes) => {
+  // tslint:disable
+  let projectPairs = projectData.reduce((result, value, index, array) => {
+    if (index % 2 === 0) {
+      // tslint:disable
+      result.push(array.slice(index, index + 2));
+    }
+    return result;
+  }, [] as Project[][]);
+
+  return (
+    <div>
+      {projectPairs.map((pair) => (
+        <div className="row">
+          {pair.map(p => (<div className="one-half column" onClick={() => history.push('/projects/' + p.name) || selectProject(p)} key={p.name}>
+            <ProjectItem {...p} />
+          </div>))}
+        </div>
+      ))}
+    </div>
+  )
+};
 
 // tslint:disable-next-line:no-any
 const ProjectList = (props: any) => (
-  <div className="row">
+  <div>
     <Route
       exact={true}
       path={'/projects'}
