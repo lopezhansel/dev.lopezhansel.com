@@ -2,11 +2,15 @@
 Personal website to display Work.
 
 ### Todo
+- New Styles
+- Fix portfolio directory 
+- Add contact page
+- ProjectInfo into redux
+- Add more content
+  - Add lopezhansel.com
+  - Add wts-es
 - Edit markdown
-- Add Router
-- Add Redux
 - Add ./Services folder 
 - Implement ProjectInfo.nextProject()
 - Implement Gallery.thumbsList[]
-- Add lopezhansel.com project
 - Add Download resume button
