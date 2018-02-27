@@ -1,4 +1,3 @@
-import { projects } from './project-data';
 
 const MS_IN_DAY = 86400000;
 
@@ -103,9 +102,6 @@ export class Project extends ProjectDates implements Projects {
   }
 
 }
-
-export let projectData = projects
-  .map(p => new Project(p.name, p.company, p.description, p.stack, p.galleryPath, p.galleryTotal, p.links, p.markdownUrl));
 
 // let startDate = new Date(Date.now() - (MS_IN_DAY * 5)).toJSON()
 // project.startDate = startDate;
