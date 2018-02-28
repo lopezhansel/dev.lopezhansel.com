@@ -6,7 +6,7 @@ import { createStore } from 'redux';
 import Home from '../Home/Home';
 import ProjectInfo from '../Project-Info/Project-Info';
 import ProjectList from '../Project-List/Project-List';
-import appReducers from '../reducers';
+import appReducers from '../../reducers';
 import './App.css';
 
 const store = createStore(appReducers);

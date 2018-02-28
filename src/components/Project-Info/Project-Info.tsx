@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
-import { Project } from '../portfolio/project';
+import { Project } from '../../services/project';
 import './Project-Info.css';
 import axios from 'axios';
 import { Markdown } from '../Markdown/Markdown';

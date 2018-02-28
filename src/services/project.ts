@@ -1,11 +1,11 @@
 
 const MS_IN_DAY = 86400000;
 
-export interface Projects {
+export interface Project {
   name: string;
   company: string;
   description: string;
-  stack: string[];
+  // stack: string[];
   thumb: string;
   markdown: string;
   gallery: string[];
@@ -66,7 +66,7 @@ export class ProjectDates extends ProjectImages {
   }
 }
 
-export class Project extends ProjectDates implements Projects {
+export class Project extends ProjectDates implements Project {
 
   public markdown: string;
   public markdownUrl: string;

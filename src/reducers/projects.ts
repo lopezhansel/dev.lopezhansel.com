@@ -1,8 +1,8 @@
 import { AnyAction } from 'redux';
-import { projects } from '../portfolio/project-data';
-import { Project } from '../portfolio/project';
+import { projectsData } from '../services/project-data';
+import { Project } from '../services/project';
 
-let projectData = projects
+let projectData = projectsData
   .map(p => new Project(p.name, p.company, p.description, p.stack, p.galleryPath, p.galleryTotal, p.links, p.markdownUrl));
 
 const project = (state = { projectData }, action: AnyAction) => {

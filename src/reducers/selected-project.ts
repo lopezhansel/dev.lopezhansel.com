@@ -1,5 +1,5 @@
 import { AnyAction } from 'redux';
-import { Project } from '../portfolio/project';
+import { Project } from '../services/project';
 
 const _selectedProject: Project | null = null;
 

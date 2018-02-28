@@ -1,4 +1,4 @@
-export let projects = [
+export let projectsData = [
   {
     name: 'Caminemos Juntas!',
     company: 'Creative Circle',

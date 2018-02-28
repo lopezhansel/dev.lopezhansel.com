@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { Route, Link } from 'react-router-dom';
 // My Files
-import { Project } from '../portfolio/project';
+import { Project } from '../../services/project';
 import './Project-List.css';
 import ProjectInfo from '../Project-Info/Project-Info';
 
