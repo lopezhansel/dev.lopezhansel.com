@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import { connect, Dispatch } from 'react-redux';
 import { Route, Link } from 'react-router-dom';
 // My Files
 import { Project } from '../../services/project';
 import './Project-List.css';
 import ProjectInfo from '../Project-Info/Project-Info';
+import { websiteApp } from '../../reducers';
 
 type ProjectListTypes = {
   projectData: Project[],
@@ -35,13 +36,13 @@ const Projects = ({ projectData, selectProject, history }: ProjectListTypes) => 
   )
 };
 
-// tslint:disable-next-line:no-any
+// tslint:disable
 const ProjectList = (props: any) => (
   <div>
     <Route
       exact={true}
       path={'/projects'}
-      render={({ history }) => <Projects {...props} />}
+      render={() => <Projects {...props} />}
     />
     <Route path={`/projects/:projectId`} component={ProjectInfo} />
   </div>
@@ -67,15 +68,13 @@ function ProjectItem(project: Partial<Project>) {
   );
 }
 
-// tslint:disable-next-line:no-any
-const mapStateToProps = (state: { projects: { projectData: any[] } }, ownProps: any) => {
+const mapStateToProps = (state: websiteApp) => {
   return {
     projectData: state.projects.projectData
   };
 };
 
-// tslint:disable-next-line:no-any
-const mapDispatchToProps = (dispatch: any, ownProps: any) => {
+const mapDispatchToProps = (dispatch: Dispatch<null>) => {
   return {
     selectProject: (p: Project) => {
       dispatch({ type: 'Select Project', payload: p });

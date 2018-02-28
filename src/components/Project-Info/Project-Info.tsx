@@ -5,6 +5,7 @@ import './Project-Info.css';
 import axios from 'axios';
 import { Markdown } from '../Markdown/Markdown';
 import { match, Link } from 'react-router-dom';
+import { websiteApp } from '../../reducers';
 
 function fetchMarkdown(url: string) {
   return axios.get(url).then(d => d.data);
@@ -133,11 +134,9 @@ function Slide(prop: { image: string }) {
   );
 }
 
-// tslint:disable-next-line:no-any
-const mapStateToProps = (state: any, ownProps: any) => ({
+const mapStateToProps = (state: websiteApp) => ({
   selectedProject: state.selectedProject,
   projectData: state.projects.projectData
 });
 
-/* tslint:disable */
 export default connect(mapStateToProps)(ProjectInfo);

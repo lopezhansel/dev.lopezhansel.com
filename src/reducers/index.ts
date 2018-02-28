@@ -1,8 +1,14 @@
 import { combineReducers } from 'redux';
 import projects from './projects';
 import selectedProject from './selected-project';
+import { Project } from '../services/project';
 
-const websiteApp = combineReducers({
+export type websiteApp = {
+  projects: { projectData: Project[] };
+  selectedProject: Project | null
+};
+
+const websiteApp = combineReducers<websiteApp>({
   projects,
   selectedProject
 });
