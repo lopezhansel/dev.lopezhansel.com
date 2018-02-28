@@ -48,7 +48,7 @@ const ProjectList = (props: any) => (
   </div>
 );
 
-function ProjectItem(project: Partial<Project>) {
+export function ProjectItem(project: Partial<Project>) {
   const noDescription = <p>Description not available...</p>;
   return (
     <div className="project">
