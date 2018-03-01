@@ -23,3 +23,4 @@
 #### Educational Articles
 - Weekly Articles meant to motivate user to be more active. 
 - Notifications are sent on each new article. 
+- User can deselect topics not interested in. 

@@ -2,7 +2,8 @@
 
 #### Four Sites one Code Base
 - WTS is designed to support 4 states in English and Spanish. 
-- Content is JSON and Markdown base allowing for easy creation and editing.
+- Content is written in simple file formats that can be edited by non-developers and translators.
+- Content then is generated into code. 
 
 #### Slides Component
 - Slides are built from JSON and Markdown content. Allowing faster creation of content.
