@@ -25,8 +25,8 @@ const Projects = ({ projectData, selectProject, history }: ProjectListTypes) => 
 
   return (
     <div>
-      {projectPairs.map((pair) => (
-        <div className="row">
+      {projectPairs.map((pair, rowKey) => (
+        <div className="row" key={rowKey}>
           {pair.map(p => (<div className="one-half column" onClick={() => history.push('/projects/' + p.name) || selectProject(p)} key={p.name}>
             <ProjectItem {...p} />
           </div>))}
