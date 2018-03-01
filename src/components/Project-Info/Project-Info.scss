@@ -1,5 +1,11 @@
 .project-info {
   color: #444;
+  .heading {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #265056;
+    font-weight: 500;
+    font-size: 20px;
+  }
   .pi-container {
     background: rgba(255, 255, 255, .95);
     padding: 1em;

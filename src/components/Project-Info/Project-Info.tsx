@@ -82,16 +82,16 @@ class ProjectInfo extends React.Component {
             <Gallery {...galleryProps} />
             <br />
             <div className="description">
-              <b>Purpose</b>
+              <div className="heading">Purpose</div>
               {!description && noContent}
               <p>{description && description}</p>
             </div>
             <div>
-              <b>Company</b>
+              <div className="heading">Company</div>
               <p>{company}</p>
             </div>
             <div>
-              <b>Technologies used</b>
+              <div className="heading">Technologies used</div>
               <p>{stack.join(', ')}</p>
             </div>
             <Links links={links} />
