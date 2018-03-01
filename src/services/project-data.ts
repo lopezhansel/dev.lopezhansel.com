@@ -10,6 +10,16 @@ export let projectsData = [
     markdownUrl: undefined,
   },
   {
+    name: 'dev.lopezhansel.com',
+    company: 'Open Source',
+    description: 'Personal website to display previous work done.',
+    stack: 'React,Redux',
+    galleryPath: 'lopezhansel',
+    galleryTotal: 0,
+    links: ['https://github.com/lopezhansel/lopezhansel.com/'],
+    markdownUrl: undefined,
+  },
+  {
     name: 'WayToServe Español',
     company: 'Klein Buendel',
     description: 'IN-DEVELOPMENT. Way To Serve-Español is a state-approved training program to get alcohol server licence. Way To Serve trains employees for responsible beverage service. Way To Serve provides videos, graphics, quizes, and interactive activities that simulate real world experiences.',
@@ -73,10 +83,10 @@ export let projectsData = [
   {
     name: 'OctoDex',
     company: 'Open Source',
-    description: 'Easily create and share a virtual business card using your Github information',
+    description: 'E asily create and share a virtual business card using your Github information',
     stack: 'AngularJS,Node,​Express,MongoDB',
     galleryPath: 'octodex',
-    galleryTotal: 0,
+    galleryTotal: 12,
     links: ['https://github.com/lopezhansel/OctoDex'],
     markdownUrl: undefined,
   }
