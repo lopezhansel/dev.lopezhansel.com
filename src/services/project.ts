@@ -1,15 +1,15 @@
 
 const MS_IN_DAY = 86400000;
 
-export interface Project {
-  name: string;
-  company: string;
-  description: string;
-  // stack: string[];
-  thumb: string;
-  markdown: string;
-  gallery: string[];
-}
+// export interface Project {
+//   name: string;
+//   company: string;
+//   description: string;
+//   // stack: string[];
+//   thumb: string;
+//   markdown: string;
+//   gallery: string[];
+// }
 
 export class CheckProp {
   protected checkProp(propValue: number | string, propName: string) {
@@ -66,7 +66,7 @@ export class ProjectDates extends ProjectImages {
   }
 }
 
-export class Project extends ProjectDates implements Project {
+export class Project extends ProjectDates {
 
   public markdown: string;
   public markdownUrl: string;

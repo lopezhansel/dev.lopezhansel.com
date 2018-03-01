@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 // My Files
 import { Project } from '../../services/project';
 import './Project-List.css';
@@ -28,7 +28,7 @@ const Projects = ({ projectData, selectProject, history }: ProjectListTypes) => 
       {projectPairs.map((pair, rowKey) => (
         <div className="row" key={rowKey}>
           {pair.map(p => (<div className="one-half column" onClick={() => history.push('/projects/' + p.name) || selectProject(p)} key={p.name}>
-            <ProjectItem {...p} />
+            {ProjectCard(p)}
           </div>))}
         </div>
       ))}
@@ -48,7 +48,7 @@ const ProjectList = (props: any) => (
   </div>
 );
 
-export function ProjectItem(project: Partial<Project>) {
+export function ProjectCard(project: Project) {
   const noDescription = <p>Description not available...</p>;
   return (
     <div className="project">
@@ -62,7 +62,7 @@ export function ProjectItem(project: Partial<Project>) {
       </div>
       <div className="company">@{project.company}</div >
       <div className="more">
-        <Link to={'/projects/' + project.name}> View</Link>
+        {project.stack.join()}
       </div>
     </div>
   );
