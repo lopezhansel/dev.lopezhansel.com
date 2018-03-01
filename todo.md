@@ -8,6 +8,7 @@
 * [ ] Implement ProjectInfo.nextProject()
 * [ ] Implement Gallery.thumbsList[]
 * [ ] Add description to each image
+* [ ] Fix Wts-es in Gallery in mobile devices
 ## Projects-List
 ## Project-Card
 * [ ] Add Technologies To Card 
