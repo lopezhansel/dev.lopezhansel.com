@@ -50,6 +50,7 @@ const ProjectList = (props: any) => (
 
 export function ProjectCard(project: Project) {
   const noDescription = <p>Description not available...</p>;
+  let stackPreview = project.stack.slice(0, 2).join() + '...';
   return (
     <div className="project">
       <div className="title">
@@ -62,7 +63,7 @@ export function ProjectCard(project: Project) {
       </div>
       <div className="company">@{project.company}</div >
       <div className="more">
-        {project.stack.join()}
+        {stackPreview}
       </div>
     </div>
   );
