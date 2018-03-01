@@ -40,10 +40,24 @@ class ProjectInfo extends React.Component {
     }
   }
 
+  // tslint:disable-next-line
+  componentDidUpdate(prevProp: any) {
+    /* Check If Selected Project Was Updated */
+    let didUpdateSelectedProject = !prevProp.selectedProject && !!this.props.selectedProject;
+    if (didUpdateSelectedProject) {
+      this.setupSlickAndMarkdown();
+    }
+  }
+
+  /** Init Slick.js and FetchMarkdown */
+  setupSlickAndMarkdown() {
+    setupSlick();
+    this.getMarkDown();
+  }
+
   componentDidMount() {
-    if (this.props.selectedProject) {
-      setupSlick();
-      this.getMarkDown();
+    if (!!this.props.selectedProject) {
+      this.setupSlickAndMarkdown();
     }
   }
 
