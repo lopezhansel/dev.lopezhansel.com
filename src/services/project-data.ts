@@ -55,7 +55,7 @@ export let projectsData = [
     description: '',
     stack: 'Angular 5',
     galleryPath: 'wts-es',
-    galleryTotal: 0,
+    galleryTotal: 4,
     links: [],
     markdownUrl: undefined,
   },
