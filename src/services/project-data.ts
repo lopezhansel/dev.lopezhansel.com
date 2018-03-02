@@ -2,7 +2,7 @@ export let projectsData = [
   {
     name: 'MobileMen',
     company: 'Klein Buendel',
-    description: 'Track ​physical ​activity. ​Encourage ​healthy ​behavior ​with education ​articles ​and ​notifications. ​Provided incentives ​to users by unlocking ​achievement ​and badges.',
+    description: 'Research study for African American men with targeted content. Designed to motivate for increased step activity.',
     stack: 'Angular 5,​Ionic 3,​NgRx,​Node,​Express,MongoDB',
     galleryPath: 'mobilemen',
     galleryTotal: 27,
@@ -62,7 +62,7 @@ export let projectsData = [
   {
     name: 'OctoDex',
     company: 'Open Source',
-    description: 'E asily create and share a virtual business card using your Github information',
+    description: 'Easily create and share a virtual business card using your Github information',
     stack: 'AngularJS,Node,​Express,MongoDB',
     galleryPath: 'octodex',
     galleryTotal: 12,
