@@ -1,4 +1,4 @@
- ## Front-End
+## Front-End
 - Badges achievements to motivate for more step activity. 
 - View and edit previous exercise activities. 
 - Weekly educational articles meant to motivate user to be more active. 
